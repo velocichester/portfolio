@@ -1,0 +1,842 @@
+/*
+Theme Name: Chester Bosworth
+Theme URI: https://chesterbosworth.com
+Author: Chester Bosworth
+Author URI: 
+Description: Custom theme build for Chester Bosworth. 
+Version: 1.0
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+	0. 	Custom Fonts
+	1. 	Element Base
+	2. 	Helper Classes
+	3. 	Hero + About Section
+
+/* -------------------------------------------------------------------------- */
+/*	0. Custom Fonts
+/* -------------------------------------------------------------------------- */
+/* Imports Poppins Font from Google in:
+Light 300, Light 300 Italic, Regular 400, Regular 400 italic, 
+Medium 500, Semi-bold 600, Semi-bold 600 italic, Bold 700, Bold 700 italic */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+/* -------------------------------------------------------------------------- */
+/*	1. Element Base
+/* -------------------------------------------------------------------------- */
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	font-size: 3.125rem;
+}
+
+span.subheading, h2, h3, h4, h5, h6 {
+	color:#363339;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+}
+
+.subheading, title {
+    font-size:1.875rem;
+}
+
+p,span {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+.btn {
+    border: none;
+    color: #248277;
+}
+.btn:hover {
+    background: #248277;
+    color:#FFFFFF;
+}
+.btn-filled, input[type="submit"] {
+    background: #248277;
+    color: #ffffff;
+}
+
+.btn-filled:hover{
+     color:#ffffff;
+     background:#37B7A8;
+}
+
+.bg-primary .btn:hover {
+    color: #248277;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	2. Helper Classes
+/* -------------------------------------------------------------------------- */
+
+a.btn, input[type="submit"] {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700 !important;
+}
+
+a {
+    color: #248277;
+}
+
+a:hover {
+    color: #1F6960;
+}
+
+
+/* Text transform */
+.uppercase {
+    text-transform: uppercase;
+}
+
+.wide-text {
+    letter-spacing: 0.1em;
+}
+
+.bg-cb-black {
+	background-color: #1f1f1f;
+}
+
+.bg-cb-black h2, .bg-cb-black i, .bg-cb-black p, .bg-cb-black a, .bg-cb-black span{
+	color: #fff;
+}
+
+.bg-cb-black a {
+    text-decoration: none;
+}
+
+.bg-cb-black a:hover, .bg-cb-black a:hover span {
+    color: rgba(255,255,255,0.6);
+}
+
+
+.bg-tan {
+	background-color: #F3E5C0;
+}
+
+.shadow {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.navbar-brand {
+    display: inline-block;
+}
+
+.navbar-brand:after {
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    width: 40px;
+    height: 40px;
+    content: '';
+    background: #F3E5C0;
+    z-index: -1;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.navbar-brand {
+    font-weight:700;
+    z-index: 0;
+    position:relative;
+}
+
+.navbar-brand span {
+    color: #fff;
+    font-size:1.25rem;
+    font-weight:700;
+}
+
+.ftco-animate {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*	3. Hero + About Section
+/* -------------------------------------------------------------------------- */
+.hero-wrap {
+	width: 100%;
+	height: 100%;
+	position: inherit;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position:relative;
+}
+
+.hero-wrap .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    width: 50%;
+    background: #F3E5C0;
+	z-index:-1;
+}
+
+.hero-wrap h2 {
+	font-size: 1.25rem;
+}
+
+.polaroid span {
+    background: #fff;
+    display: inline-block;
+    margin: 55px 45px 30px;
+    padding: 15px 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    transition: all .2s linear;
+    z-index: 0;
+    position: relative;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*	4. Accomplishments Section
+/* -------------------------------------------------------------------------- */
+.ftco-counter .text strong.number, .ftco-counter .text strong.symbol {
+    font-weight: 700;
+    font-size: 1.875rem;
+    display:inline-block;
+    color:#F9F5E9;
+}
+
+.ftco-counter .text span {
+    display: block;
+    font-size: 1rem;
+    color:#ffffff;
+}
+
+.ftco-counter .block-18 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	4. Projects Section
+/* -------------------------------------------------------------------------- */
+
+.project-slide {
+	background: #fff;
+    display: inline-block;
+    margin: 0 auto 5%;
+    padding: 10px 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,.3);
+    transition: all .2s linear;
+    z-index: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.project-slide:hover {
+	transform: scale(1.01);
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0,0,0,.7);
+}
+
+.project-slide h5 {
+	color: #541912;
+	font-weight: 600;
+	font-size: 1.5rem;
+}
+
+.project-date {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    padding: 8px 15px 2px;
+    position: relative;
+    z-index: -500;
+    border-top: 5px solid #696969;
+    border-radius: 0 0 5px 5px;
+    background-color: #696969;
+    color: #fff;
+}
+
+.project-badge {
+	font-size: 11px;
+    background-color: #f9f5e9;
+    color: #541912;
+	font-weight: 400;
+}
+
+.projects-slider.owl-theme .owl-nav {
+    padding-top: 0rem;
+}
+
+.projects-slider .owl-prev, .projects-slider .owl-next {
+	background: none !important;
+    position: absolute;
+    display: block !important;
+    width: auto;
+    color: #212529 !important;
+    top: 28%;
+}
+
+.projects-slider .owl-prev:hover, .projects-slider .owl-next:hover {
+    color: #737373 !important;
+}
+
+.projects-slider .owl-prev span, .projects-slider .owl-next span {
+    font-size: 5em !important;
+}
+.projects-slider .owl-prev {
+	left: 0px;
+}
+
+.projects-slider .owl-next {
+	right: 0px;
+}
+
+.card.web-lay .card-body{
+    padding:0 !important;
+}
+
+.modal-close {
+    text-align: right;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    color: #212529;
+}
+
+.modal-close:hover {
+    color: #696969;
+}
+
+[class^="site-slider-"] .owl-prev, [class^="site-slider-"] .owl-next, [class*=" site-slider-"] .owl-prev, [class*=" site-slider-"] .owl-next {
+	background: none !important;
+    position: absolute;
+    display: block !important;
+    width: auto;
+    color: rgba(115,115,115, .6) !important;
+    top: 28%;
+}
+
+[class^="site-slider-"] .owl-prev:hover, [class^="site-slider-"] .owl-next:hover, [class*=" site-slider-"] .owl-prev:hover, [class*=" site-slider-"] .owl-next:hover {
+    color:rgba(175,175,175, .7) !important;
+}
+
+[class^="site-slider-"] .owl-prev span, [class^="site-slider-"] .owl-next span, [class*=" site-slider-"] .owl-prev span, [class*=" site-slider-"] .owl-next span {
+    font-size: 9em !important;
+}
+
+[class^="site-slider-"] .owl-prev, [class*=" site-slider-"] .owl-prev {
+	left: 0px!important;
+}
+
+[class^="site-slider-"] .owl-next, [class*=" site-slider-"] .owl-next {
+	right: 0px!important;
+}
+
+.site-view .modal-content .owl-theme .owl-dots button.owl-dot {
+    background: 0 0;
+    padding: 0;
+    border: none;
+}
+
+.site-view .project-description {
+    padding: 0.5rem;
+}
+
+.site-view .project-description p{
+    font-size:.8rem;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*	5. Services Section
+/* -------------------------------------------------------------------------- */
+
+#services a {
+	-webkit-transition: .3s all ease;
+	-o-transition: .3s all ease;
+	transition: .3s all ease;
+	color: #F3E5C0;
+	text-decoration: none !important;
+}
+
+#services a:hover {
+	text-decoration: none;
+	outline: none !important;
+}
+
+.heading-section p {
+	color: #696969;
+}
+
+.services-1 {
+	margin-bottom: 40px;
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+.services-1 .icon {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.services-1 .icon i {
+    font-size: 60px;
+    line-height: 1.0;
+    color: #696969;
+}
+
+.services-1 .desc h3 {
+    line-height: 1.3;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    color: #541912;
+}
+.services-1 .desc h3:after {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: #696969;
+    margin: 0 auto;
+}
+
+.services-1 .desc p {
+    color: rgba(84, 25, 18, 0.7);
+}
+
+
+.services-1:hover {
+	background: #F3E5C0;
+}
+
+.services-1:hover .icon i {
+    font-size: 60px;
+    line-height: 1.0;
+	color: #212529;
+}
+
+.services-1:hover h3:after {
+    background: #541912;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	5. Skills Section
+/* -------------------------------------------------------------------------- */
+
+.skills-tile {
+    background-color: #2A2929;
+    padding: 12px 19px;
+    margin: 5px 0;
+    border-radius: 8px;
+}
+
+.row.skill-icon {
+    margin-top:7px;
+}
+
+
+p.skill {
+	font-size: .8rem;
+	font-weight: 600;
+	margin-top: 1rem;
+	margin-bottom: 0;
+	font-style: normal;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	5. Experience Section
+/* -------------------------------------------------------------------------- */
+.vertical-timeline {
+    width: 95%;
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+    padding: 2em 0;
+}
+
+.vertical-timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 100%;
+    width: 4px;
+    background: #fff;
+}
+
+.vertical-timeline-element:first-child {
+    margin-top: 0;
+}
+
+.vertical-timeline * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.vertical-timeline-element {
+    position: relative;
+    margin: 2em 0;
+}
+
+.vertical-timeline-element-icon{
+    background: rgb(174, 148, 79);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.experience-icon {
+    text-align: center;
+    display:inline-block;
+    font-size: 160%;
+    margin-top: 18%;
+}
+
+.experience-badge, .main-badge {
+    text-align: left!important;
+    padding: 5px 8px!important;
+    vertical-align: baseline;
+    font-weight: 300!important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.experience-badge {
+    font-size: 11px!important;
+    background-color: #f9f5e9!important;
+    color: #000;
+}
+
+.main-badge {
+    font-size: 13px!important;
+    background-color: #ae944f!important;
+    color: #fff;
+}
+
+
+.vertical-timeline-element>div {
+    min-height: 1px;
+}
+
+.vertical-timeline-element-content {
+    position: relative;
+    margin-left: 60px;
+    background: #fff;
+    border-radius: .25em;
+    padding: 1em;
+    -webkit-box-shadow: 0 3px 0 #ddd;
+    box-shadow: 0 3px 0 #ddd;
+}
+
+.vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
+    visibility: visible;
+    -webkit-animation: cd-bounce-2 .6s;
+    animation: cd-bounce-2 .6s;
+}
+
+.vertical-timeline-element-icon {
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+.vertical-timeline-element-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 4px #fff,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05);
+    box-shadow: 0 0 0 4px #fff,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05);
+}
+
+.vertical-timeline-element-content-arrow {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right-color: #fff;
+}
+
+.vertical-timeline-element-title {
+    font-size: 1.09375rem;
+}
+
+.vertical-timeline-element-subtitle, .vertical-timeline-element-title {
+    margin: 0;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+    float: left;
+    padding: .8em 0;
+    opacity: .7;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+    display: inline-block;
+}
+
+.vertical-timeline-element-date {
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date, .vertical-timeline-element-content p {
+    font-size: 13px;
+    font-size: .8125rem;
+    font-weight: 500;
+}
+
+.vertical-timeline-element-content ul.vertical-timeline-element-details {
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-details li {
+    display:block;
+    font-size: .825rem;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-details li:before{
+        content: ">";
+        font-family: 'Poppins', sans-serif;
+        font-weight:700;
+        font-size: 1rem;
+        float: left;
+        margin-left: -17px;
+        color: #ae944f!important;
+}
+
+.vertical-timeline-element-content .skill-badges{
+    text-align: left; 
+    margin-top: 1rem;
+}
+
+.vertical-timeline--animate .vertical-timeline-element-content.is-hidden {
+    visibility: hidden;
+}
+
+.vertical-timeline-element--no-children .vertical-timeline-element-content-arrow, .vertical-timeline-element--no-children .vertical-timeline-element-content:before {
+    display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	5. Contact Me / Footer
+/* -------------------------------------------------------------------------- */
+#contact i {
+    font-size:3rem;
+}
+
+.block-23 ul {
+    padding: 0;
+}
+.block-23 ul li, .block-23 ul li > a {
+    display: table;
+    line-height: 1.5;
+}
+
+.block-23 ul li .icon {
+    width: 40px;
+    font-size: 18px;
+    padding-top: 2px;
+}
+
+.block-23 ul li .icon, .block-23 ul li .text {
+    display: table-cell;
+    vertical-align: top;
+}
+/* -------------------------------------------------------------------------- */
+/*	5. Media Queries
+/* -------------------------------------------------------------------------- */
+
+/* min-width:1170px */
+
+@media only screen and (min-width: 1170px) {
+
+    /* Experience Section */
+    .experience-icon{
+        font-size: 220%;
+        margin-top: 23%;
+    }
+    .vertical-timeline.vertical-timeline--two-columns {
+        width: 98%;
+    }
+
+    .vertical-timeline.vertical-timeline--two-columns:before {
+        left: 50%;
+        margin-left: -2px;
+    }
+
+    .vertical-timeline-element {
+        margin: 4em 0;
+    }
+
+    .vertical-timeline--two-columns .vertical-timeline-element-content {
+        margin-left: 0;
+        padding: 1.5em;
+        width: 45%;
+    }
+
+    .vertical-timeline--two-columns .vertical-timeline-element-content-arrow {
+        top: 24px;
+        left: 100%;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+        position: absolute;
+        width: 100%;
+        left: 124%;
+        top: 6px;
+        font-size: 16px;
+        font-size: 1rem;
+    }
+
+    .vertical-timeline--two-columns .vertical-timeline-element-icon {
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        margin-left: -30px;
+    }
+
+    .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content.bounce-in, .vertical-timeline--two-columns.vertical-timeline--animate .vertical-timeline-element:nth-child(2n):not(.vertical-timeline-element--left) .vertical-timeline-element-content.bounce-in {
+        -webkit-animation: cd-bounce-2-inverse .6s;
+        animation: cd-bounce-2-inverse .6s;
+    }
+
+    .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content-arrow, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(2n):not(.vertical-timeline-element--left) .vertical-timeline-element-content-arrow {
+        top: 24px;
+        left: auto;
+        right: 100%;
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(2n):not(.vertical-timeline-element--left) .vertical-timeline-element-content {
+    /*float: right;*/
+        left:55%;
+    }
+
+    .vertical-timeline-element:last-child {
+        margin-bottom: 0;
+    }
+
+    .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content .vertical-timeline-element-date, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(2n):not(.vertical-timeline-element--left) .vertical-timeline-element-content .vertical-timeline-element-date {
+        left: auto;
+        right: 124%;
+        text-align: right;
+    }
+
+    .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+        position: absolute;
+        width: 100%;
+        left: 124%;
+        top: 6px;
+        font-size: 16px;
+        font-size: 1rem;
+    }
+    /* Projects Section */
+    .projects-slider .owl-prev {
+        left: 0px!important;
+    }
+
+    .projects-slider .owl-next {
+        right:0px!important;
+    }
+    .polaroid span {
+        margin:55px 75px 30px;
+    }
+
+    /* Skills */
+
+
+}
+
+/* min-width:768px */
+@media only screen and (min-width: 768px) {
+    .vertical-timeline-element-content .vertical-timeline-element-date {
+        font-size: 14px;
+        font-size: .875rem;
+    }
+
+    .vertical-timeline-element-content .vertical-timeline-element-date {
+        font-size: 14px;
+        font-size: .875rem;
+    }
+
+    
+    /* Projects Section */
+    .projects-slider .owl-prev {
+        left: -2rem!important;
+    }
+
+    .projects-slider .owl-next {
+        right: -2rem!important;
+    }
+
+    .skills-tile i {
+        font-size:370%;
+    }
+}
+
+/* max-width:575px */
+@media only screen and (max-width: 575px) {
+    .projects-slider .owl-prev, .projects-slider .owl-next{
+        top: 81%;
+    }
+    .fa-2x {
+        font-size: 1.2em;
+    }
+    [class^="site-slider-"] .owl-prev span, [class^="site-slider-"] .owl-next span, [class*=" site-slider-"] .owl-prev span, [class*=" site-slider-"] .owl-next span {
+        font-size: 5em !important;
+    }
+
+    .skills-tile{
+        padding: .825rem;
+    }
+
+    .skills-tile.long p.skill{
+        font-size:.6rem;
+    }
+
+    .skills-tile i {
+        font-size:260%;
+    }
+
+    .services-1 {
+        padding:1.6em;
+    }
+}
