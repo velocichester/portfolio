@@ -86,7 +86,7 @@ const showSuccess = (input) => {
     error.textContent = '';
 }
 
-form.addEventListener('submit', function (e) {
+/*form.addEventListener('submit', function (e) {
     //prevent the form from submitting
     e.preventDefault();
 
@@ -103,7 +103,7 @@ form.addEventListener('submit', function (e) {
     if (isFormValid) {
         
     }
-});
+});*/
 
 const debounce = (fn, delay = 500) => {
     let timeoutId;

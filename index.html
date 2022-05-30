@@ -1058,22 +1058,17 @@
                 <form id="contact-form" name="contact" class="bg-tan shadow p-4 p-md-5 contact-form ftco-animate" method="POST" data-netlify="true">
                   <div class="mb-2">
                     <label for="inputName" class="form-label visually-hidden">Your Name</label>
-                    <input type="text" class="form-control" placeholder="Your Name" id="inputName" aria-label="YourName">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" id="inputName" aria-label="YourName">
                     <small></small>
                   </div>
                   <div class="mb-2">
                     <label for="inputEmail" class="form-label visually-hidden">Email Address</label>
-                    <input type="email" class="form-control" placeholder="Email Address" id="inputEmail" aria-label="YourEmail">
+                    <input type="email" name="email" class="form-control" placeholder="Email Address" id="inputEmail" aria-label="YourEmail">
                     <small></small>
-                  </div>
-                  <div class="mb-2">
-                    <label for="inputSubject" class="form-label visually-hidden">Subject</label>
-                    <input type="text" class="form-control" placeholder="Subject" id="inputSubject" aria-label="Subject">
-                    <!--<input type="text" class="form-control" placeholder="Subject">-->
                   </div>
                   <div class="mb-3">
                     <label for="inputMessage" class="form-label visually-hidden">Message</label>
-                    <textarea id="inputMessage" cols="30" rows="7" placeholder="Message" aria-label="Message" class="form-control"></textarea>
+                    <textarea id="inputMessage" name="message" cols="30" rows="7" placeholder="Message" aria-label="Message" class="form-control"></textarea>
                     <small></small>
                   </div>
                   <div class="text-center">
@@ -1138,5 +1133,6 @@
     <script src="js/jquery.stellar.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/scrollax.min.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
