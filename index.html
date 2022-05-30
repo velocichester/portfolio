@@ -1055,14 +1055,16 @@
                   </div>
               </div>
               <div class="col-md-6 col-12 order-md-last d-flex justify-content-center">
-                <form action="#" class="bg-tan shadow p-4 p-md-5 contact-form ftco-animate">
+                <form id="contact-form" name="contact" class="bg-tan shadow p-4 p-md-5 contact-form ftco-animate" method="POST" data-netlify="true">
                   <div class="mb-2">
                     <label for="inputName" class="form-label visually-hidden">Your Name</label>
                     <input type="text" class="form-control" placeholder="Your Name" id="inputName" aria-label="YourName">
+                    <small></small>
                   </div>
                   <div class="mb-2">
                     <label for="inputEmail" class="form-label visually-hidden">Email Address</label>
                     <input type="email" class="form-control" placeholder="Email Address" id="inputEmail" aria-label="YourEmail">
+                    <small></small>
                   </div>
                   <div class="mb-2">
                     <label for="inputSubject" class="form-label visually-hidden">Subject</label>
@@ -1072,6 +1074,7 @@
                   <div class="mb-3">
                     <label for="inputMessage" class="form-label visually-hidden">Message</label>
                     <textarea id="inputMessage" cols="30" rows="7" placeholder="Message" aria-label="Message" class="form-control"></textarea>
+                    <small></small>
                   </div>
                   <div class="text-center">
                     <input type="submit" value="Send Message" class="btn btn-filled wide-text uppercase py-3 px-5">
