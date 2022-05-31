@@ -15,10 +15,14 @@ jQuery(document).ready(function (){
 
 
 	var fullHeight = function() {
-		if (jQuery(window).width() > 768){
+		if (jQuery(window).width() > 1000){
 		jQuery('.js-fullheight').css('height', jQuery(window).height());
-		jQuery('.js-fullheight').css('max-height', (jQuery(window).height())/2);
-		} else {
+		jQuery('.js-fullheight').css('max-height', (jQuery(window).height())*.75);
+		} else if (jQuery(window).width() > 768){
+			jQuery('.js-fullheight').css('height', jQuery(window).height());
+			jQuery('.js-fullheight').css('max-height', (jQuery(window).height())/2);
+		}
+		else {
 			jQuery('.js-fullheight').css('height', jQuery(window).height());
 		}
 		jQuery(window).resize(function(){

@@ -166,9 +166,17 @@ a:hover {
     font-weight:700;
 }
 
+.navbar-dark .navbar-nav .nav-link{
+    color:rgb(255,255,255);
+}
+
 .ftco-animate {
     opacity: 0;
     visibility: hidden;
+}
+
+p.lead{
+    font-weight:400 !important;
 }
 
 
