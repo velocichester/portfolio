@@ -1,2 +1,2 @@
-# portfolio
-Chester Bosworth's Portfolio
+# Chester Bosworth's Portfolio
+
